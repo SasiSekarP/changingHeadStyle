@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- style link -->
+    <link rel="stylesheet" href="./style.css">
+
+    <title>fontSizeChange</title>
+</head>
+<body>
+    <div class="inputContainer" id="inputContainer">
+        <input type="text" id="inputTxt" placeholder="Enter a text"/>
+        <button class="btn" onclick="adding()">add</button>
+        <button class="btn" onclick="changeToh1()">h1</button>
+        <button class="btn" onclick="changeToh2()">h2</button>
+        <button class="btn" onclick="changeToh3()">h3</button>
+    </div>
+    <div class="altMessage" id="altMessage">Please Enter a valid message</div>
+    <div class="resultContainer" id="resultContainer">
+    </div>
+    <script>
+        let inputTxtEl = document.getElementById('inputTxt');
+        let inputContainerEl = document.getElementById('inputContainer');
+        let resultContainerEl = document.getElementById('resultContainer');
+        let fontSizeOfEl = 20;
+        let altMessageEl = document.getElementById('altMessage');
+        let inputTxtVl = ''
+
+        function adding(){
+            inputTxtVl = inputTxtEl.value;
+            if(!inputTxtVl){
+                altMessageEl.style.visibility = 'visible';
+                resultContainerEl.innerText = '';
+                console.log('it have no value')
+            }else{
+                resultContainerEl.innerHTML=`<h1>${inputTxtVl}</h1>`
+                inputTxtEl.value = '';
+                altMessageEl.style.visibility = 'hidden';
+                console.log('it have value')
+            }
+        }
+
+        function changeToh1(){
+            resultContainerEl.innerHTML=`<h1>${inputTxtVl}</h1>`
+        }
+
+        function changeToh2(){
+            resultContainerEl.innerHTML=`<h2>${inputTxtVl}</h2>`
+        }
+
+        function changeToh3(){
+            resultContainerEl.innerHTML=`<h3>${inputTxtVl}</h3>`
+        }
+    </script>
+</body>
+</html>
