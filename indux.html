@@ -8,7 +8,7 @@
     <!-- style link -->
     <link rel="stylesheet" href="./style.css">
 
-    <title>fontSizeChange</title>
+    <title>changing head size</title>
 </head>
 <body>
     <div class="inputContainer" id="inputContainer">
@@ -34,12 +34,10 @@
             if(!inputTxtVl){
                 altMessageEl.style.visibility = 'visible';
                 resultContainerEl.innerText = '';
-                console.log('it have no value')
             }else{
                 resultContainerEl.innerHTML=`<h1>${inputTxtVl}</h1>`
                 inputTxtEl.value = '';
                 altMessageEl.style.visibility = 'hidden';
-                console.log('it have value')
             }
         }
 
