@@ -8,17 +8,27 @@
     <!-- style link -->
     <link rel="stylesheet" href="./style.css">
 
-    <title>changing head size</title>
+    <title>changing head size and color</title>
 </head>
 <body>
     <div class="inputContainer" id="inputContainer">
         <input type="text" id="inputTxt" placeholder="Enter a text"/>
         <button class="btn" onclick="adding()">add</button>
-        <button class="btn" onclick="changeToh1()">h1</button>
-        <button class="btn" onclick="changeToh2()">h2</button>
-        <button class="btn" onclick="changeToh3()">h3</button>
     </div>
+    
     <div class="altMessage" id="altMessage">Please Enter a valid message</div>
+    <div class="btnContainer">
+        <div class="row2">
+            <button class="btn" onclick="changeToh1()">h1</button>
+            <button class="btn" onclick="changeToh2()">h2</button>
+            <button class="btn" onclick="changeToh3()">h3</button>
+        </div>
+        <div class="row3">
+            <button class="btn" onclick="changeToRed()">Red</button>
+            <button class="btn" onclick="changeToGreen()">Green</button>
+            <button class="btn" onclick="changeToBlue()">Blue</button>
+        </div>
+    </div>
     <div class="resultContainer" id="resultContainer">
     </div>
     <script>
@@ -52,6 +62,21 @@
         function changeToh3(){
             resultContainerEl.innerHTML=`<h3>${inputTxtVl}</h3>`
         }
+
+        function changeToRed(){
+            resultContainerEl.style.color = 'red';
+        }
+
+        
+        function changeToGreen(){
+            resultContainerEl.style.color = 'green';
+        }
+
+        
+        function changeToBlue(){
+            resultContainerEl.style.color = 'blue';
+        }
+
     </script>
 </body>
 </html>

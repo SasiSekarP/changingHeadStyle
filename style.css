@@ -18,7 +18,7 @@ body{
 }
 
 .btn{
-    width: 2.5rem;
+    width: 5rem;
     height: 2rem;
     margin-left: 1rem;
     font-size: 1rem;
@@ -28,6 +28,11 @@ body{
     border: 1px solid white;
     background-color: rgb(47, 47, 50);
     color: white;
+}
+
+.btn:hover{
+    background-color: black;
+    box-shadow: 5px 5px 10px black;
 }
 
 input{
@@ -43,6 +48,7 @@ input{
     width: 80%;
     margin: auto;
     font-size: 20px;
+    color: red;
 }
 
 .altMessage{
@@ -50,4 +56,21 @@ input{
     margin: auto;
     color: red;
     visibility: hidden;
+    text-align: center;
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.btnContainer{
+    width: 60%;
+    margin: auto;
+}
+
+.row2,.row3{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.row3{
+    margin-top: 1rem;
 }
